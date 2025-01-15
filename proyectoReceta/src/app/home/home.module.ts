@@ -6,6 +6,9 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';  //importamos el custom elements schema
+
+
 
 @NgModule({
   imports: [
@@ -14,6 +17,7 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA] // añadimos el custom elements schema 
 })
 export class HomePageModule {}
