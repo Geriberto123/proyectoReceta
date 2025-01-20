@@ -50,6 +50,9 @@
     <ion-button type="submit" [disabled]="!loginForm.valid">Login</ion-button>
   </form>
   <!-- Agregar boton o link para redirigir al registro -->
-   
+  <div class="text-center">
+    <p>¿No tienes cuenta existente?</p>
+    <ion-button fill="outline" (click)="navigateToRegister()">Ir a Registro</ion-button>
+  </div>
   <p>{{errorMessage}}</p>
 </ion-content>
