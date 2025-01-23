@@ -1,22 +1,179 @@
-<ion-content>
-  <swiper-container slides-per-view="1" pagination="true">
+<swiper-container navigation pagination>
+  
+  <swiper-slide class="recipe-slide">
+    <div class="scrollable-content">
+    <h1 class="recipe-title">Spaghetti Carbonara</h1>
+    <img class="recipe-image" src="/assets/images/spaghetti.jpeg" alt="Spaghetti Carbonara">
+    <p class="recipe-description">Un plato clásico italiano hecho con queso, huevo y panceta.</p>
 
-    <swiper-slide class="bg-color-slide"> 
-      <h1 class="title1"> Hola Slide 1</h1> 
-      <img src="/assets/images/Edificio PCA.jpg">
-      <ion-icon name="cafe-outline"></ion-icon>
-      <p> Hola soy el slide uno de la libreria swiper </p>
-    </swiper-slide>
-    <swiper-slide> 
-      <h1> Hola Slide 2 </h1> 
-      <ion-icon name="battery-charging-outline"></ion-icon>
-      <p> Hola soy el slide dos de la libreria swiper </p>
-    </swiper-slide>
-    <swiper-slide> 
-      <ion-icon name="close" class="close-icon" (click)="finish()"></ion-icon>
-      <h1> Hola Slide 3 </h1> 
-      <ion-icon name="battery-charging-outline"></ion-icon>
-      <p> Hola soy el slide tres de la libreria swiper </p>
-    </swiper-slide>
-  </swiper-container>
-</ion-content>
+    <div class="recipe-info">
+      <p><strong>Tiempo de preparación:</strong> 20 min</p>
+      <p><strong>Tiempo de cocción:</strong> 20 min</p>
+      <p><strong>Tiempo total:</strong> 40 min</p>
+      <p><strong>Porciones:</strong> 8</p>
+    </div>
+
+    <div class="recipe-ingredients">
+      <h2>Ingredientes:</h2>
+      <ul>
+        <li>1 libra de espaguetis</li>
+        <li>2 cucharadas de aceite de oliva, divididas</li>
+        <li>8 rebanadas de tocino, cortadas en cubitos</li>
+        <li>1 cebolla, picada</li>
+        <li>1 diente de ajo, picado</li>
+        <li>¼ taza de vino blanco seco</li>
+        <li>4 huevos grandes, batidos</li>
+        <li>½ taza de queso parmesano rallado</li>
+        <li>Sal y pimienta negra al gusto</li>
+        <li>2 cucharadas de perejil fresco picado</li>
+        <li>2 cucharadas de queso parmesano rallado</li>
+      </ul>
+    </div>
+
+    <div class="recipe-steps">
+      <h2>Paso a paso:</h2>
+      <ol>
+        <li>Pon a hervir una olla grande con agua ligeramente salada. Cocina los espaguetis en agua hirviendo, revolviendo de vez en cuando, hasta que estén tiernos pero firmes al morderlos, aproximadamente 12 minutos. Escurre, mezcla los espaguetis con 1 cucharada de aceite de oliva y reserva.</li>
+        <li>Coloca el tocino cortado en cubitos en una sartén grande a fuego medio; cocina y revuelve hasta que se dore de manera uniforme, aproximadamente 10 minutos. Escurre el tocino sobre toallas de papel, reservando 2 cucharadas de grasa de tocino en la sartén.</li>
+        <li>Agrega 1 cucharada de aceite de oliva a la grasa de tocino en la sartén. Agrega la cebolla picada y cocina a fuego medio hasta que la cebolla esté traslúcida. Agrega el ajo picado y cocina hasta que desprenda un aroma, aproximadamente 1 minuto. Agrega el vino y cocina 1 minuto más.</li>
+        <li>Regresa el tocino cocido a la sartén; agrega los espaguetis cocidos. Revuelve para cubrir y calentar, agregando más aceite de oliva si parece seco o se pega.</li>
+        <li>Añade los huevos batidos y cocina, revolviendo constantemente con pinzas o un tenedor grande, hasta que los huevos estén apenas cuajados. Agrega rápidamente 1/2 taza de queso parmesano y revuelve nuevamente.</li>
+        <li>Sazona con sal y pimienta (recuerda que el tocino y el parmesano son muy salados).</li>
+        <li>Sirve caliente con perejil picado espolvoreado por encima y queso parmesano adicional en la mesa.</li>
+      </ol>
+    </div>
+  </div>
+  </swiper-slide>
+
+  <swiper-slide class="recipe-slide">
+    <div class="scrollable-content">
+    <h1 class="recipe-title">Taco de Carnitas</h1>
+    <img class="recipe-image" src="/assets/images/tacos.jpeg" alt="Taco de Carnitas">
+    <p class="recipe-description">Tacos deliciosos rellenos de carnitas tiernas y sabrosas.</p>
+
+    <div class="recipe-info">
+      <p><strong>Tiempo de preparación:</strong> 15 min</p>
+      <p><strong>Tiempo de cocción:</strong> 8-10 horas</p>
+      <p><strong>Tiempo total:</strong> 8-10 horas</p>
+      <p><strong>Porciones:</strong> 6</p>
+    </div>
+
+    <div class="recipe-ingredients">
+      <h2>Ingredientes:</h2>
+      <ul>
+        <li>2 libras de carne de cerdo (paleta o espaldilla)</li>
+        <li>1 cebolla, picada</li>
+        <li>2 naranjas, su jugo</li>
+        <li>2 cucharaditas de comino</li>
+        <li>1 cucharadita de sal</li>
+        <li>1 cucharadita de orégano seco</li>
+        <li>1/4 cucharadita de pimienta de cayena</li>
+        <li>12 tortillas de maíz</li>
+        <li>1/2 taza de repollo rallado</li>
+        <li>1/4 taza de cebolla morada, picada</li>
+        <li>1/2 taza de pico de gallo</li>
+        <li>Crema agria (opcional)</li>
+        <li>Ralladura de lima (opcional)</li>
+      </ul>
+    </div>
+
+    <div class="recipe-steps">
+      <h2>Paso a paso:</h2>
+      <ol>
+        <li>Prepara las carnitas: quita la grasa de la carne de cerdo. Córtala en trozos de 2 a 3 pulgadas; colócala en una olla de cocción lenta de 4 cuartos. Agrega la cebolla, el jugo de naranja, el comino, la sal, el orégano y la pimienta de cayena.</li>
+        <li>Tapa y cocina a temperatura baja durante 8 a 10 horas o a temperatura alta durante 4 a 5 horas.</li>
+        <li>Transfiere la carne de cerdo a un tazón grande; desmenuza con 2 tenedores. Agrega suficiente líquido de cocción de la olla de cocción lenta para humedecerla.</li>
+        <li>Prepara la crema de lima: agrega 2 cucharadas de jugo de lima a un tazón pequeño. Agrega el yogur y la sal. Espolvorea con chile en polvo.</li>
+        <li>Prepara los tacos: sirve la carne de cerdo en tortillas con repollo rallado, cebolla morada y pico de gallo. Adorna con crema y ralladura de lima.</li>
+      </ol>
+    </div>
+  </div>
+  </swiper-slide>
+
+  <swiper-slide class="recipe-slide">
+    <div class="scrollable-content">
+    <h1 class="recipe-title">Sushi</h1>
+    <img class="recipe-image" src="/assets/images/sushi.jpeg" alt="Sushi">
+    <p class="recipe-description">Sushi delicioso con carne de cangrejo, aguacate y pepino.</p>
+
+    <div class="recipe-info">
+      <p><strong>Tiempo de preparación:</strong> 25 min</p>
+      <p><strong>Tiempo de cocción:</strong> 20 min</p>
+      <p><strong>Tiempo total:</strong> 45 min</p>
+      <p><strong>Porciones:</strong> 4</p>
+    </div>
+
+    <div class="recipe-ingredients">
+      <h2>Ingredientes:</h2>
+      <ul>
+        <li>2 tazas de arroz para sushi</li>
+        <li>2 1/2 tazas de agua</li>
+        <li>1/4 taza de vinagre de arroz</li>
+        <li>2 cucharadas de azúcar</li>
+        <li>1 cucharadita de sal</li>
+        <li>4 hojas de nori</li>
+        <li>1/4 libra de carne de cangrejo</li>
+        <li>1 aguacate, cortado en tiras</li>
+        <li>1 pepino, cortado en tiras</li>
+        <li>1 cucharada de jengibre encurtido</li>
+      </ul>
+    </div>
+
+    <div class="recipe-steps">
+      <h2>Paso a paso:</h2>
+      <ol>
+        <li>Reúne todos los ingredientes. Precalienta el horno a 300 grados F (150 grados C).</li>
+        <li>Pon a hervir agua en una olla mediana; agrega el arroz. Reduce el fuego a medio-bajo, tapa y cocina a fuego lento hasta que el arroz esté tierno y el agua se haya absorbido, de 20 a 25 minutos.</li>
+        <li>Mezcla el vinagre de arroz, el azúcar y la sal en un tazón pequeño. Mezcla suavemente con el arroz cocido en la olla y reserva.</li>
+        <li>Coloca las hojas de nori en una bandeja para hornear, calienta el nori en el horno precalentado hasta que esté tibio, de 1 a 2 minutos.</li>
+        <li>Centra 1 hoja de nori en una estera de bambú para sushi. Usa las manos húmedas para esparcir una fina capa de arroz encima. Coloca 1/4 de la carne de cangrejo, el aguacate, el pepino y el jengibre encurtido sobre el arroz en una línea en el centro.</li>
+        <li>Levanta un extremo de la estera y enróllalo firmemente sobre el relleno para formar un rollo completo. Repite con los ingredientes restantes.</li>
+        <li>Usa un cuchillo afilado y húmedo para cortar cada rollo en 4 a 6 rebanadas.</li>
+      </ol>
+    </div>
+  </div>
+  </swiper-slide>
+
+  <swiper-slide class="recipe-slide">
+    <div class="scrollable-content">
+    <h1 class="recipe-title">Ensalada César</h1>
+    <img class="recipe-image" src="/assets/images/ensalada.webp" alt="Ensalada César">
+    <p class="recipe-description">Una ensalada fresca con lechuga, pollo y aderezo César.</p>
+
+    <div class="recipe-info">
+      <p><strong>Tiempo de preparación:</strong> 20 min</p>
+      <p><strong>Tiempo de cocción:</strong> 15 min</p>
+      <p><strong>Tiempo total:</strong> 35 min</p>
+      <p><strong>Porciones:</strong> 6</p>
+    </div>
+
+    <div class="recipe-ingredients">
+      <h2>Ingredientes:</h2>
+      <ul>
+        <li>6 dientes de ajo pelados, divididos</li>
+        <li>3/4 taza de mayonesa</li>
+        <li>6 cucharadas de queso parmesano rallado, divididos</li>
+        <li>5 filetes de anchoa, picados</li>
+        <li>1 cucharada de jugo de limón, o más al gusto</li>
+        <li>1 cucharadita de salsa Worcestershire</li>
+        <li>1 cucharadita de mostaza Dijon</li>
+        <li>Sal y pimienta negra molida al gusto</li>
+        <li>1/4 taza de aceite de oliva</li>
+        <li>4 tazas de pan del día anterior, cortado en cubos</li>
+        <li>1 cabeza de lechuga romana, cortada en trozos del tamaño de un bocado</li>
+      </ul>
+    </div>
+
+    <div class="recipe-steps">
+      <h2>Paso a paso:</h2>
+      <ol>
+        <li>Picar 3 dientes de ajo y colocarlos en un bol pequeño. Agregar mayonesa, 2 cucharadas de queso parmesano rallado, anchoas, jugo de limón, salsa Worcestershire y mostaza; mezclar bien para combinar. Sazonar a gusto con sal y pimienta negra. Refrigerar hasta que esté listo para usar.</li>
+        <li>Calentar el aceite en una sartén grande a fuego medio. Cortar los 3 dientes de ajo restantes en cuartos y agregarlos al aceite caliente. Cocinar y revolver hasta que se doren, luego retirar el ajo de la sartén.</li>
+        <li>Cocinar los cubos de pan en aceite aromatizado caliente, dándoles vuelta con frecuencia, hasta que se doren levemente; transferir a un plato y sazonar con sal y pimienta.</li>
+        <li>Colocar la lechuga en un bol grande. Agregar el aderezo, el queso parmesano restante y los cubos de pan sazonados; mezclar bien para cubrir.</li>
+      </ol>
+    </div>
+  </div>
+  </swiper-slide>
+
+</swiper-container>
