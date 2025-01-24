@@ -99,5 +99,10 @@
     </ng-container>
 
     <ion-button type="submit" expand="block" [disabled]="!registerForm.valid">Registrar</ion-button>
+    
+    <div class="login-redirect">
+      <p>¿Ya tienes cuenta?</p>
+      <ion-button fill="clear" color="primary" (click)="navigateToLogin()">Ingresa aquí</ion-button>
+    </div>
   </form>
 </ion-content>

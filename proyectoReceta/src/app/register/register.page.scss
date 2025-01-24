@@ -101,6 +101,32 @@ ion-content {
       box-shadow: none;
     }
   }
+
+  .login-redirect {
+    margin-top: 20px;
+    text-align: center;
+  
+    p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      color: #01579b; 
+      margin-bottom: 10px;
+    }
+  
+    ion-button {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      --color: #0288d1;
+      --color-hover: #01579b;
+      text-transform: uppercase;
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: scale(1.1); 
+      }
+    }
+  }
   
   @keyframes gradient-animation {
     0% {

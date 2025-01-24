@@ -71,7 +71,7 @@ export class RegisterPage implements OnInit {
           Validators.required
         ]))
       },
-      { validators: this.passwordMatchValidator } // Custom validator for password confirmation
+      { validators: this.passwordMatchValidator } 
     );
   }
 
@@ -92,5 +92,8 @@ export class RegisterPage implements OnInit {
       console.log(err);
       this.errorMessage = err;
     });
+}
+navigateToLogin() {
+  this.navCtrl.navigateForward('/login');
 }
 }
