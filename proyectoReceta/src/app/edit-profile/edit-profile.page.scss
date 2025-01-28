@@ -1,0 +1,87 @@
+ion-content {
+    --background: linear-gradient(135deg, #e3f2fd, #ffffff, #e3f2fd);
+    background-size: 400% 400%;
+    animation: gradient-animation 10s ease infinite;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+ion-toolbar {
+    --background: #01579b;
+    --color: white;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ion-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+ion-button {
+    --background: linear-gradient(90deg, #0288d1, #01579b);
+    --color: white;
+    --border-radius: 8px;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.5s ease;
+    background-size: 200% 200%;
+
+    &:hover {
+        transform: scale(1.05);
+        background-position: 100% 0;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    }
+}
+
+ion-item {
+    --background: transparent;
+    --border-color: #e0e0e0;
+    --padding-start: 0;
+    --padding-end: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #01579b;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        background: #e3f2fd;
+    }
+}
+
+ion-label {
+    color: #0288d1;
+    font-weight: 500;
+}
+
+ion-input {
+    --color: #333;
+    --padding-start: 10px;
+    --padding-end: 10px;
+    font-size: 16px;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
