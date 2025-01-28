@@ -18,7 +18,11 @@
   </ion-item>
   <ion-item>
     <ion-label position="floating">Imagen</ion-label>
-    <ion-input [(ngModel)]="user_data.image"></ion-input>
+    <ion-input [(ngModel)]="user_data.image" readonly></ion-input>
+    <ion-button fill="clear" (click)="changeImage()">Cambiar imagen</ion-button>
+  </ion-item>
+  <ion-item *ngIf="user_data.image">
+    <img [src]="user_data.image" alt="Imagen de perfil" style="max-width: 100%; height: auto;" />
   </ion-item>
   <ion-button expand="block" (click)="saveChanges()">Guardar cambios</ion-button>
 </ion-content>
