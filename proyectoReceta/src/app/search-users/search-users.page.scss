@@ -1,0 +1,88 @@
+// search-users.page.scss
+
+ion-content {
+    --background: linear-gradient(135deg, #e3f2fd, #ffffff, #e3f2fd);
+    background-size: 400% 400%;
+    animation: gradient-animation 10s ease infinite;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+}
+
+ion-toolbar {
+    --background: #01579b;
+    --color: white;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ion-searchbar {
+    --background: #ffffff;
+    --color: #01579b;
+    --placeholder-color: #0288d1;
+    --icon-color: #0288d1;
+    --border-radius: 12px;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+ion-list {
+    background: transparent;
+}
+
+ion-item {
+    --background: transparent;
+    --padding-start: 0;
+    --inner-padding-end: 0;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+}
+
+ion-avatar {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+ion-label {
+    h2 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #01579b;
+        margin-bottom: 5px;
+    }
+}
+
+ion-button {
+    --background: linear-gradient(90deg, #0288d1, #01579b);
+    --color: white;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.5s ease;
+    background-size: 200% 200%;
+
+    &:hover {
+        transform: scale(1.1);
+        background-position: 100% 0;
+        --box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
