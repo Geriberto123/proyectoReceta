@@ -11,10 +11,26 @@
       </ion-toolbar>
     </ion-header>
     <ion-content>
+      <ion-item routerLink="/menu/home">
+        <ion-icon name="home-outline" slot="start"></ion-icon>
+        Inicio
+      </ion-item>
+
+      <ion-item routerLink="/menu/account">
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+        Cuenta
+      </ion-item>
+
+      <ion-item routerLink="/menu/search-users">
+        <ion-icon name="search-outline" slot="start"></ion-icon>
+        Buscar Usuarios
+      </ion-item>
+
       <ion-item (click)="log_out()">
-        <ion-icon name="log-out-outline"> </ion-icon> Salir
-      </ion-item>>
+        <ion-icon name="log-out-outline" slot="start"></ion-icon>
+        Salir
+      </ion-item>
     </ion-content>
   </ion-menu>
-  <ion-router-outlet id="content"> </ion-router-outlet>
+  <ion-router-outlet id="content"></ion-router-outlet>
 </ion-split-pane>
