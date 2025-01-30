@@ -20,8 +20,8 @@ export class AccountPage implements OnInit {
     last_name: '',
     email: '',
     image: '',
-    followed_users: [],
-    following_users: []
+    followees: [],
+    followers: []
   };
 
   constructor(
@@ -76,6 +76,13 @@ export class AccountPage implements OnInit {
           text: 'Documentos',
           handler: () => {
             this.capturePhoto(CameraSource.Photos);
+          }
+        },
+        {
+          text: "Cancelar",
+          role: "cancel",
+          handler: () => {
+            console.log('Cancelado');
           }
         }
       ]

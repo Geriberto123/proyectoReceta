@@ -13,6 +13,7 @@ export class SearchUsersPage implements OnInit {
   limit: number = 10;
   query: string = '';
   hasMoreUsers: boolean = true;
+  current_user: any;
   constructor(
     private userService: UserService,
     private storage: Storage
@@ -21,8 +22,9 @@ export class SearchUsersPage implements OnInit {
     this.loadUsers();
   }
   async loadUsers(event?: any){
-    const currentUser = await this.storage.get('user');
-    const followingUsers = currentUser.following_users || [];
+    this.current_user = await this.storage.get('user');
+    const followingUsers = this.current_user.followees || [];
+    console.log('followingUsers', followingUsers);
     this.userService.listUsers(this.page, this.limit, this.query).then(
       (data: any) => {
         if (data.users.length > 0){
@@ -30,7 +32,8 @@ export class SearchUsersPage implements OnInit {
             ...user,
             is_following: followingUsers.some((followedUser: any) => followedUser.id == user.id),
           }));
-          this.users = [...this.users, ...data.users];
+          this.users = [...this.users, ...updateUsers];
+          console.log('users', this.users);
           this.page++;
         }else{
           this.hasMoreUsers = false;
@@ -53,11 +56,49 @@ export class SearchUsersPage implements OnInit {
     this.hasMoreUsers = true;
     this.loadUsers();
   }
-  follow(user_id: any){
-    console.log('follow', user_id);
+  follow(followee_id: any){
+    console.log('follow', followee_id);
+    const user_id = this.current_user.id;
+    this.userService.followUser(user_id, followee_id).then(
+      (data: any) => {
+        console.log(data);
+        this.users = this.users.map((user: any) => {
+          if (user.id == followee_id){
+            return {
+              ...user,
+              is_following: true
+            }
+          }
+          return user;
+        });
+      }
+    ).catch(
+      (error) => {
+        console.log(error);
+      });
   }
-  unfollow(user_id: any){
-    console.log('unfollow', user_id);
+
+  unfollow(followee_id: any) {
+    console.log('unfollow', followee_id);
+    const user_id = this.current_user.id;
+    this.userService.unfollowUser(user_id, followee_id).then(
+      (data: any) => {
+        console.log(data);
+        this.users = this.users.map((user: any) => {
+          if (user.id == followee_id) {
+            return {
+              ...user,
+              is_following: false
+            };
+          }
+          return user;
+        });
+      }
+    ).catch(
+      (error) => {
+        console.log(error);
+      }
+    );
   }
   toggleFollow(user: any){
     if (user.is_following){
